@@ -214,11 +214,8 @@ class Form(QObject):
 
     def showMsg(self, title, msg):
         msgBox = QMessageBox()
-#    msgBox.setText("")
         msgBox.setWindowTitle(title)
         msgBox.setInformativeText(msg)
-
-#    msgBox.setStandardButtons(QMessageBox.Save | QMessageBox.Discard | QMessageBox.Cancel)
         msgBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
         msgBox.setDefaultButton(QMessageBox.Yes)
         ret = msgBox.exec_()
