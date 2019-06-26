@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>522</width>
+    <height>387</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Registro de usuário</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white; font-family: arial, sans-serif;</string>
+  </property>
+  <widget class="QPushButton" name="btnCancelar">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>356</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSalvar">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>356</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>501</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Informações do usuário</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>64</y>
+      <width>38</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nome:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbEstado">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>260</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;background-color: white;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>185</y>
+      <width>84</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cidade:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtEndereco">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>103</y>
+      <width>361</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Endereço</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>26</y>
+      <width>25</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CPF:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtNome">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>61</y>
+      <width>361</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nome do usuário&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Nome do usuário</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtCidade">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>183</y>
+      <width>361</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Cidade</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>301</y>
+      <width>25</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CEP:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtCep">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>300</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Número do CPF&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="inputMask">
+     <string extracomment="Código de endereçametno postal">00.000-000</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>CEP</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>145</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Complemento:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>224</y>
+      <width>84</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bairro:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtComplemento">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>143</y>
+      <width>361</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Complemento</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtCpf">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>24</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Número do CPF&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="inputMask">
+     <string extracomment="Número do CPF">000.000.000-00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Número do CPF</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtEstadoNome">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>248</x>
+      <y>260</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Nome do estado</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtBairro">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>222</y>
+      <width>361</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Bairro</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>263</y>
+      <width>54</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Estado:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>105</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Endereço:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblCpfMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>44</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblNomeMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>82</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblEnderecoMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>123</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblComplementoMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>164</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblCidadeMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>204</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblBairroMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>243</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblEstadoMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>282</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblCepMsg">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>320</y>
+      <width>361</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white; font-family: arial, sans-serif;font-size: 10px;color:red;</string>
+    </property>
+    <property name="text">
+     <string>Número do cpf inválido</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>txtCpf</tabstop>
+  <tabstop>txtNome</tabstop>
+  <tabstop>txtEndereco</tabstop>
+  <tabstop>txtComplemento</tabstop>
+  <tabstop>txtCidade</tabstop>
+  <tabstop>txtBairro</tabstop>
+  <tabstop>cmbEstado</tabstop>
+  <tabstop>txtEstadoNome</tabstop>
+  <tabstop>txtCep</tabstop>
+  <tabstop>btnSalvar</tabstop>
+  <tabstop>btnCancelar</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
