@@ -4,10 +4,10 @@ from datetime import datetime
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QPushButton, QLineEdit, QComboBox, QLabel, QMessageBox
 from PySide2.QtCore import QFile, QObject
-from estado_controller import EstadoController
-from estado import Estado
+from model.estado import Estado
 from model.pessoa import Pessoa
 from controller.pessoacontroller import PessoaController
+from controller.estadocontroller import EstadoController
 
 
 class Form(QObject):

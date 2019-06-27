@@ -1,6 +1,3 @@
-import json
-
-
 class EstadoController:
 
     def getEstados(self):
