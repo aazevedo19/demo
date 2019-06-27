@@ -1,12 +1,14 @@
+import sys
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtCore import QFile, QObject
-from PySide2.QtWidgets import QTreeWidget, QTreeWidgetItem
+from PySide2.QtWidgets import QTreeWidget, QTreeWidgetItem, QWidget
+from forms.inspessoa import FormPessoa
 
 
-class Form(QObject):
+class Form(QWidget):
 
-    def __init__(self, ui_file, parent=None):
-        super(Form, self).__init__(parent)
+    def __init__(self, ui_file):
+        super(Form, self).__init__()
         ui_file = QFile(ui_file)
         ui_file.open(QFile.ReadOnly)
         loader = QUiLoader()
@@ -15,10 +17,11 @@ class Form(QObject):
         ui_file.close()
 
         self.tree = self.window.findChild(QTreeWidget, 'treeMenu')
-#        self.tree.itemSelectionChanged.connect(self.itemSelection)
+        #        self.tree.itemSelectionChanged.connect(self.itemSelection)
         self.tree.currentItemChanged.connect(self.itemSelection)
+        self.tree.itemClicked.connect(self.itemSelection)
         menulist = ["Cadastro de Pessoa"]
-        itemlist = ["Inserir", "Atualizar","Excluir", "Listar"]
+        itemlist = ["Inserir", "Atualizar", "Excluir", "Listar"]
         for str in menulist:
             parent = QTreeWidgetItem(self.tree)
             parent.setText(0, str)
@@ -31,4 +34,6 @@ class Form(QObject):
 
     def itemSelection(self):
         node = self.tree.currentItem()
-        print("Select " + node.text(0) )
+        print("select " + node.text(0))
+        if node.text(0) in "Inserir":
+            self.form = FormPessoa('ui/pessoa.ui')

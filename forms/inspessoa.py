@@ -2,7 +2,7 @@ import sys
 import json
 from datetime import datetime
 from PySide2.QtUiTools import QUiLoader
-from PySide2.QtWidgets import QPushButton, QLineEdit, QComboBox, QLabel, QMessageBox
+from PySide2.QtWidgets import QPushButton, QLineEdit, QComboBox, QLabel, QMessageBox, QWidget
 from PySide2.QtCore import QFile, QObject
 from model.estado import Estado
 from model.pessoa import Pessoa
@@ -10,10 +10,10 @@ from controller.pessoacontroller import PessoaController
 from controller.estadocontroller import EstadoController
 
 
-class Form(QObject):
+class FormPessoa(QWidget):
 
-    def __init__(self, ui_file, parent=None):
-        super(Form, self).__init__(parent)
+    def __init__(self, ui_file):
+        super(FormPessoa, self).__init__()
         ui_file = QFile(ui_file)
         ui_file.open(QFile.ReadOnly)
 
@@ -72,12 +72,10 @@ class Form(QObject):
             estado = Estado(sigla, nome)
             self.cmbestado.addItem(estado.descricao, userData=estado)
         self.window.show()
-        return
 
     def cpf_handler(self):
         self.txtcpfmsg.setText("")
         self.txtcpfmsg.setVisible(0)
-        return
 
     def nome_handler(self):
         self.txtnomemsg.setText("")
@@ -210,7 +208,7 @@ class Form(QObject):
         self.txtcpf.setCursorPosition(0)
 
     def cancelar_handler(self):
-        sys.exit(0)
+        self.window.hide();
 
     def showMsg(self, title, msg):
         msgBox = QMessageBox()
